@@ -1,2 +1,12 @@
 .DS_Store.gz
 .DS_Store
+.venv/
+.ipynb_checkpoints/
+results/
+
+
+# in/ holds the lab spreadsheets the TSVs were derived from; only the TSVs and
+# the genome annotation are distributed
+in/*
+!in/*.tsv
+!in/annotation.gff
