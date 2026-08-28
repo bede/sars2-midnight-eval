@@ -3,10 +3,12 @@
 .venv/
 .ipynb_checkpoints/
 results/
+notes.md
 
 
-# in/ holds the lab spreadsheets the TSVs were derived from; only the TSVs and
-# the genome annotation are distributed
+# Only the derived metadata tables and genome annotation are tracked from in/.
 in/*
-!in/*.tsv
+!in/barcodes.tsv
+!in/ct.tsv
+!in/runs.tsv
 !in/annotation.gff
