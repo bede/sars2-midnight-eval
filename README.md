@@ -2,7 +2,7 @@ This notebook enables reproduction of results from the following manuscript:
 
 *Rapid turnaround multiplex sequencing of SARS-CoV-2: comparing tiling amplicon protocol performance* https://www.medrxiv.org/content/10.1101/2021.12.28.21268461.full
 
-Dependencies are pinned in `uv.lock`. Run from the repository root; the notebook reads `in/` and `wf-artic/results-barcode/`.
+Dependencies are pinned in `uv.lock`. Run from the repository root; the notebook reads `in/` and `wf-artic-results/`.
 
 Interactive:
 

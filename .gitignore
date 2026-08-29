@@ -3,6 +3,7 @@
 .venv/
 .ipynb_checkpoints/
 results/
+wf-artic-results/
 notes.md
 
 
