@@ -14,6 +14,14 @@ runs = pd.read_csv(repo / "in/runs.tsv", sep="\t")["run"].tolist()
 barcodes = pd.read_csv(
     repo / "in/barcodes.tsv", sep="\t", dtype={"barcode": str}
 )
+exceptions = pd.read_csv(
+    repo / "in/artifact-exceptions.tsv", sep="\t", dtype={"barcode": str}
+)
+allowed_missing_depth = {
+    (row.run, row.barcode)
+    for row in exceptions.itertuples(index=False)
+    if "depth" in row.missing_artifacts.split(",")
+}
 
 files = [
     results / run / filename
@@ -25,6 +33,15 @@ depth_files = [
     for row in barcodes.itertuples(index=False)
 ]
 available_depth_files = [path for path in depth_files if path.is_file()]
+unexpected_missing_depth = [
+    path
+    for path in depth_files
+    if not path.is_file()
+    and (path.parent.name, path.name[7:9]) not in allowed_missing_depth
+]
+if unexpected_missing_depth:
+    formatted = "\n".join(f"  {path.relative_to(repo)}" for path in unexpected_missing_depth)
+    raise FileNotFoundError(f"unexpected missing depth files:\n{formatted}")
 files.extend(available_depth_files)
 
 compressor = zstd.ZstdCompressor(
@@ -42,5 +59,5 @@ for source in files:
 
 print(
     f"{len(files)} artifacts: {written} written; "
-    f"{len(depth_files) - len(available_depth_files)} optional depth files absent"
+    f"{len(depth_files) - len(available_depth_files)} documented depth files absent"
 )
