@@ -15,6 +15,7 @@ dependencies = [
     "pandas==2.2.3",
     "scipy==1.16.1",
     "seaborn==0.13.2",
+    "zstandard==0.25.0",
 ]
 
 [tool.uv]

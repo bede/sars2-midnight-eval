@@ -3,7 +3,9 @@
 .venv/
 .ipynb_checkpoints/
 results/
-wf-artic-results/
+wf-artic-results/**
+!wf-artic-results/**/
+!wf-artic-results/**/*.zst
 notes.md
 
 
