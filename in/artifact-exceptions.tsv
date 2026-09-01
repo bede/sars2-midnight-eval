@@ -1,0 +1,9 @@
+run	barcode	missing_artifacts	analysis_action	reason
+20211124_MIDNIGHT_SEQ4_JB_LD	01	consensus,lineage,depth	exclude_from_complete_case	Archived workflow output absent; internal quality control
+20211124_MIDNIGHT_SEQ4_JB_LD	02	consensus,lineage,depth	exclude_from_complete_case	Archived workflow output absent; negative control
+20211124_MIDNIGHT_SEQ4_JB_LD	22	consensus,lineage,depth	exclude_from_complete_case	Archived workflow output absent; positive clinical sample (Ct 29)
+20211124_MIDNIGHT_SEQ4_JB_LD	51	consensus,lineage,depth	exclude_from_complete_case	Archived workflow output absent; positive clinical sample (Ct 35)
+20211124_MIDNIGHT_SEQ4_JB_LD	54	consensus,lineage,depth	exclude_from_complete_case	Archived workflow output absent; positive clinical sample (Ct 20)
+20211124_MIDNIGHT_SEQ4_JB_LD	94	consensus,lineage,depth	exclude_from_complete_case	Archived workflow output absent; negative control
+20211124_MIDNIGHT_SEQ4_JB_LD	95	consensus,lineage,depth	exclude_from_complete_case	Archived workflow output absent; unused barcode
+20211124_MIDNIGHT_SEQ4_JB_LD	96	consensus,lineage,depth	exclude_from_complete_case	Archived workflow output absent; unused barcode
